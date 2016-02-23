@@ -1,0 +1,15 @@
+# Coursera Getting and Cleaning Data Final Project (Readme file)
+*I outlined the exact process of how I used the R code to manipulate the data in the actual run_analysis.R code file, this will be a brief overview of what I did, generally. If you want to see the actual steps, the code will walk you through it.* 
+## Steps taken to create Tidy Data set. 
+1. I began by extracting the data into my working directory from the downloaded zip file. 
+2. I noticed immediately that it was split into training and test data sets for X, Y and the Subject, which is clearly appropriate for an Data Science project. 
+3. I brought the data sets for X, Y and Subject together, independently, first. 
+4. I pulled in the activities labels that were included in the activities text file contained in the zip. 
+5. I then relabeled the variables of Y and Subject so that they were meaningful, i.e. to "Subject" and "Activity", respectively. 
+6. I then needed to update the Variables of X with the actual measurements that were taken, e.g. std(), mean () etc. This way the variables of X have meaningful labels just like Subject and Activity, an important component of tidy data. 
+7. I pulled the three data sets (Subject, Activity and Measurement/Features) together to make a single data set. 
+8. After this was done I extracted only the "features" variables that contain std() or mean(), per the course project instructions. 
+9. Then I needed to update the Activities from numeric in the data set (1-6) to the actual descriptive activity, e.g. change 1 to "Walking" and 2 to "Walking_Upstairs". This is another important component of tidy data. 
+10. With this final data set that has tidy labels of activities and variables, I created a separate data set that calculates the mean for all variables grouped by Subject and Activity. 
+11. This final tidy data set (Tidy Data.txt) was written to a text file as the final output for the course project. 
+
